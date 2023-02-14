@@ -2,8 +2,6 @@ package com.vincent.edmex.controller;
 
 import com.vincent.edmex.pojo.Message;
 import com.vincent.edmex.service.MessageService;
-import com.vincent.edmex.service.RoleService;
-import com.vincent.edmex.service.RoomService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +18,6 @@ public class MessageController {
     private final Logger logger = LoggerFactory.getLogger(MessageController.class);
     @Autowired
     MessageService messageService;
-
-    @Autowired
-    RoomService roomService;
-
-    @Autowired
-    RoleService roleService;
 
     @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('ROLE_ESP')")
