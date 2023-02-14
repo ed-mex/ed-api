@@ -1,0 +1,35 @@
+server:
+  servlet:
+    session:
+      timeout: 3m
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:mysql://89.116.229.76:2005/ed_mex
+    username: mex-sv
+    password: (J^Hv{KktF8J8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #spring.jpa.show-sql: true
+
+  thymeleaf:
+      mode: HTML
+      check-template: true
+      check-template-location: true
+      enabled: true
+      encoding: UTF-8
+      prefix: classpath:/templates/
+      suffix: .html
+  web:
+    resources:
+        static-locations: classpath:/static/
+        cache:
+          period: 0
+
+#logging:
+#  level:
+#    org:
+#      thymeleaf: trace

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head  th:include="fragments/header :: headerFragment('ED-MEX REGISTER')">
+</head>
+<body>
+<div th:replace="fragments/title.html :: title ('ED-MEX REGISTER',true)"></div>
+<div th:replace="fragments/navbar.html :: bar"></div>
+<div class="main-div mx-auto">
+
+    <form class="padding mx-auto" action="#" th:action="@{/register}" method="post" th:object="${user}">
+        <h3>DATI NUOVO UTENTE</h3>
+        <div class="row-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <label>Username
+                        <input class="input col-sm" type="text" th:field="*{username}" required/><br/>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label>Password:
+                        <input class="input col-sm" type="password" th:field="*{password}" required/><br/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label>Ruolo:
+                        <select th:field="*{role}">
+                            <option th:each="roles : ${T(com.vincent.edmex.config.UserRole).values()}"
+                                    th:value="${roles}" th:text="${roles}"></option>
+                        </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label>Id stanza:
+                            <select th:field="*{idRoom}">
+                                <option th:each="id : ${roomIds}"
+                                        th:value="${id}" th:text="${id}"></option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm ">
+                        <label>
+                            Enabled ?
+                            <input type="checkbox" th:field="*{enabled}" value="true" />
+                        </label>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button class="button-style " type="submit">Register</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

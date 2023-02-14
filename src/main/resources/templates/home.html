@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head th:include="fragments/header :: headerFragment('ED-MEX')">
+</head>
+<header>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/last-message-ticker.css}"/>
+</header>
+<body>
+<div th:replace="fragments/title.html :: title ('ED-MEX',true)"></div>
+<div th:replace="fragments/navbar.html :: bar"></div>
+
+
+<div class="main-div">
+    <form class="padding" th:object="${message}" action="#" th:action="@{/}" method="post">
+        <h3>INVIA IL TUO MESSAGGIO</h3>
+        <div class="row-padding container">
+            <div class="ticker-wrapper-v">
+                <div class="heading">ULTIMO MESSAGGIO</div>
+                <ul class="news-ticker-v">
+                    <li><a th:text="${lastMessageSender}"></a></li>
+                    <li><a th:text="${lastMessageDate}"></a></li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <label>Messaggio da: </label>
+                        <input class="input col-sm" type="text" placeholder="Chi Sei?" th:field="*{sender}" required>
+                    </div>
+                    <div class="col-sm">
+                        <label>Messaggio :</label>
+                        <input class="input col-sm" type="text" placeholder="Testo Messaggio" th:field="*{message}"
+                               required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <button class="logout-button" type="submit" value="Submit" onclick="FbotonOn()">Invia!!!</button>
+            <div class="col-sm" sec:authorize="hasAuthority('ROLE_ADMIN')">
+                <label>Id stanza:
+                    <select th:field="*{idRoom}">
+                        <option th:each="id : ${roomIds}"
+                                th:value="${id}" th:text="${id}"></option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+
+    </form>
+
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    function FbotonOn() {
+        alert("Messaggio Inviato!!!");
+    }
+</script>

@@ -1,0 +1,18 @@
+server:
+  port: 80
+  servlet:
+    session:
+      timeout: 15m
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  devtools:
+    add-properties: false
+
+  datasource:
+    url: jdbc:mysql://89.116.229.76:2005/ed_mex
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: edmex
+    password: x3h9&@NcJG*PE

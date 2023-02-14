@@ -1,0 +1,149 @@
+html {
+    box-sizing: border-box;
+}
+*,::before,::after{
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6,label {
+    font-family: "Raleway", Arial, Helvetica, sans-serif
+
+}
+
+.title_style {
+    color: red !important;
+
+}
+
+h3{
+    text-align:center;
+    font-size: 25px;
+}
+.title-div {
+    content: "";
+    display: table;
+    clear: both;
+    color: #000 !important;
+    font-size: 24px !important;
+    border-bottom: 1px solid #ccc !important;
+    background-color: #fff !important;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: inherit;
+    line-height: 1.5;
+    margin-right: 16px !important
+}
+
+body{
+    background-color: #F1F1F1FC !important;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+
+}
+.main-div {
+    background-color: white !important;
+    width: auto;
+    padding: 1px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.padding{
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+
+}
+.row-padding:after, .row-padding:before{
+    content: "";
+    display: table;
+    clear: both;
+
+
+}
+.row-padding{
+    padding-left: 330px;
+}
+.input {
+    padding: 8px;
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+    border: 2px dashed #ccc
+}
+.logout-button{
+    transition-duration: 0.4s;
+    color:  red !important;
+    background-color: inherit;
+    border: none;
+    font-size: 15px;
+    padding:5px;
+}
+.logout-button:hover{
+    transition-duration: 0.4s;
+    color:  red !important;
+    background-color: #F1F1F1FC;
+    border: none;
+    font-size: 20px;
+}
+.button-static{
+    color: #616161;
+    background-color: #F1F1F1FC;
+    border-radius: 12px;
+    font-size: 20px;
+    padding:5px;
+}
+.button-style {
+    transition-duration: 0.4s;
+    color: #F1F1F1FC;
+    background-color: #616161;
+    border-radius: 12px;
+    font-size: 20px;
+    padding:5px;
+}
+.button-style:hover{
+    color: #616161;
+    background-color: #F1F1F1FC;
+    border-radius: 1px;
+    font-size: 20px;
+    padding:5px;
+}
+
+.half{
+    max-width: 49.99999%;
+    align-items: center;
+}
+.third{
+    width: 33.33333%;
+    float: left;
+}
+.twothird{
+    width: 66.66666%;
+    float: left;
+}
+.threequarter{
+    width: 74.99999%;
+    float: left;
+}
+.quarter{
+    width: 24.99999%;
+    float: left;
+}
+.fullwidth{
+    width: 100%;
+    float: left;
+}
+
+.fullwidth, .half, .third, .twothird, .threequarter, .quarter {
+    float: left;
+    width: 100%;
+}
+
+
+.row-padding, .row-padding > .half, .row-padding > .third, .row-padding > .twothird, .row-padding > .threequarter, .row-padding > .quarter, .row-padding > .fullwidth {
+    padding: 2px 2px;
+}
+
