@@ -9,7 +9,7 @@ import java.util.Collection;
 
 public class CustomUserDetails extends User implements UserDetails {
     private static final long serialVersionUID = 1L;
-    private User user;
+    private final User user;
 
     public CustomUserDetails(User user) {
         super(user);
@@ -39,7 +39,6 @@ public class CustomUserDetails extends User implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        // just for example
         return this.user.isEnabled();
     }
 

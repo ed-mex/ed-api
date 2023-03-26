@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.vincent</groupId>
-	<artifactId>ed-mex</artifactId>
+	<artifactId>ed-api</artifactId>
 	<version>1.2-SNAPSHOT</version>
 	<name>ed-mex</name>
 	<description>Project for send messages</description>
